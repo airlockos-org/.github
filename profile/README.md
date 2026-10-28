@@ -5,15 +5,17 @@
   </picture>
 </p>
 
-AirlockOS is a desktop operating system combining [Qubes](https://www.qubes-os.org/)
-isolation with [NixOS](https://nixos.org/) configuration and updates.
+**A Xen-based desktop OS built with Rust, Qubes, and Nix.**
 
-Xen runs the VMs, Qubes manages their isolation and communication, and Nix defines
-the system configuration. Whole-machine updates and rollback keep the VMs on a
-shared system generation while preserving their private data.
+AirlockOS combines Qubes VM isolation with a shared GNOME desktop. Rust services
+and machine configuration define how the system works, while Nix builds
+reproducible system generations for whole-machine rollback.
+
+- Whole-system Nix rollback, including dom0 and VMs.
+- Shared global Nix store with read-only VM closure views.
+- One GNOME desktop for applications running in separate VMs.
+
+[Website](https://airlockos.org/) · [Documentation](https://airlockos.org/docs/) · [Source](https://github.com/airlockos-org/airlockos)
 
 AirlockOS is under active development. Qubes OS security equivalence has not been
 established.
-
-- [Source code](https://github.com/airlock-org/airlock)
-- [Security and limitations](https://github.com/airlock-org/airlock/blob/main/SECURITY.md)
